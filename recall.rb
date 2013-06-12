@@ -2,7 +2,7 @@ require 'sinatra'
 require 'data_mapper'
 
 
-DataMapper::setup(:default, "postgres://localhost/recall")
+DataMapper::setup(:default, ENV['DATABASE_URL'])
 
 class Note
   include DataMapper::Resource
