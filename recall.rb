@@ -2,7 +2,7 @@ require 'sinatra'
 require 'data_mapper'
 
 
-DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/recall.db")
+DataMapper::setup(:default, "postgres://localhost/recall")
 
 class Note
   include DataMapper::Resource
